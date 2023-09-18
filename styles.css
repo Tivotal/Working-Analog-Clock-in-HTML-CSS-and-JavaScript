@@ -1,0 +1,202 @@
+/* Created by Tivotal */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f2f2f2;
+}
+
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background: #fff;
+  border-radius: 50%;
+  border: 16px solid #303030;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.8);
+}
+
+.nut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.nut1 {
+  height: 15px;
+  width: 15px;
+  background: #262626;
+  z-index: 2;
+}
+
+.nut2 {
+  width: 9px;
+  height: 9px;
+  background: red;
+  z-index: 6;
+}
+
+.indicator div {
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  background: #404040;
+}
+
+.indicator div:nth-child(1) {
+  transform: rotate(30deg) translateY(-113px);
+}
+
+.indicator div:nth-child(2) {
+  transform: rotate(60deg) translateY(-113px);
+}
+
+.indicator div:nth-child(3) {
+  transform: rotate(90deg) translateY(-113px);
+  background: red;
+}
+
+.indicator div:nth-child(4) {
+  transform: rotate(120deg) translateY(-113px);
+}
+
+.indicator div:nth-child(5) {
+  transform: rotate(150deg) translateY(-113px);
+}
+
+.indicator div:nth-child(6) {
+  transform: rotate(180deg) translateY(-113px);
+  background: red;
+}
+
+.indicator div:nth-child(7) {
+  transform: rotate(210deg) translateY(-113px);
+}
+
+.indicator div:nth-child(8) {
+  transform: rotate(240deg) translateY(-113px);
+}
+
+.indicator div:nth-child(9) {
+  transform: rotate(270deg) translateY(-113px);
+  background: red;
+}
+
+.indicator div:nth-child(10) {
+  transform: rotate(300deg) translateY(-113px);
+}
+
+.indicator div:nth-child(11) {
+  transform: rotate(330deg) translateY(-113px);
+}
+
+.indicator div:nth-child(12) {
+  transform: rotate(360deg) translateY(-113px);
+  background: red;
+}
+
+.sechand {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  z-index: 5;
+  animation: secAnim 60s linear infinite;
+}
+
+.sechand:before {
+  position: absolute;
+  content: "";
+  height: 130px;
+  width: 3px;
+  left: -1px;
+  top: -25px;
+  background: red;
+  border-radius: 3px;
+}
+
+.sechand:after {
+  position: absolute;
+  content: "";
+  height: 45px;
+  width: 7px;
+  left: -3px;
+  top: -55px;
+  background: red;
+  border-radius: 3px;
+}
+
+.minhand {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  z-index: 4;
+  animation: minAnim 3600s linear infinite;
+}
+
+.minhand:before {
+  position: absolute;
+  content: "";
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 70px solid #303030;
+  left: -3px;
+  top: -95px;
+  width: 1px;
+  height: 1px;
+}
+
+.minhand:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 25px solid #303030;
+  left: -3px;
+  top: -25px;
+  width: 3px;
+  height: 1px;
+}
+
+.hrhand {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  z-index: 3;
+  animation: hrAnim 43200s linear infinite;
+}
+
+.hrhand:before {
+  position: absolute;
+  content: "";
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 55px solid #303030;
+  left: -3px;
+  top: -75px;
+  width: 1px;
+  height: 1px;
+}
+
+.hrhand:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 20px solid #303030;
+  left: -3px;
+  top: -20px;
+  width: 3px;
+  height: 1px;
+}
