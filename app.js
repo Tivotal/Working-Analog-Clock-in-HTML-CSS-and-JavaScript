@@ -1,10 +1,12 @@
 /* Created by Tivotal */
 
 (function () {
-  let time = new Date(), //we get this time from our pc time not from server
+  //getting current time
+  let time = new Date(),
     second = (time.getSeconds() / 60) * 360,
     minute = (time.getMinutes() / 60) * 360 + (time.getSeconds() / 60) * 6,
     hour = (time.getHours() / 12) * 360 + (time.getMinutes() / 60) * 30,
+    //animation function using keyframes
     animation = [
       "@keyframes secAnim{from{transform: rotate(" +
         second +
@@ -23,5 +25,6 @@
         "deg);}}",
     ].join("");
 
+  //inserting animation code into style tag in the html file
   document.querySelector("#clock-animation").innerHTML = animation;
 })();
